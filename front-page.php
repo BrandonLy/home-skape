@@ -17,6 +17,24 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<!--Slideshow-->
+		<div id="slideshow"></div>
+
+		<div id="flavor-wrap">
+			<div class="flavor" id="sun">
+				<img class="flavor-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/sun.png">
+				<p class="flavor-text">LOWER ENERGY</p>
+			</div>
+			<div class="flavor" id="lock">
+				<img class="flavor-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/lock.png">
+				<p class="flavor-text">PRIVACY</p>
+			</div>
+			<div class="flavor" id="tree">
+				<img class="flavor-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/tree.png">
+				<p class="flavor-text">BEAUTIFUL SCENERY</p>
+			</div>
+		</div>
+
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
