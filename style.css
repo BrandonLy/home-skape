@@ -941,7 +941,31 @@ nav a, nav a:visited {
 	background-color: #EDECEC;
 	width: 100%;
 }
+/*End of header styles*/
 
+/*--------------------------------------------------------------
+## Contact
+--------------------------------------------------------------*/
+.map-locations {
+	width: 100%;
+	margin-left: 325px;
+}
+.call-asset {
+	display: inline-block;
+	width: 500px;
+}
+.email-asset {
+	display: inline-block;
+	width: 500px;
+}
+
+
+
+
+
+
+
+<<<<<<< Updated upstream
 /*End of header styles*/
 
 /*Index styles*/
@@ -966,3 +990,5 @@ nav a, nav a:visited {
 }
 
 /*End of index styles*/
+=======
+>>>>>>> Stashed changes
