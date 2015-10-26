@@ -42,14 +42,14 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Media
 	## Captions
 	## Galleries
-
+# Contact
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 html {
-	font-family: sans-serif;
+	font-family: futura, sans-serif;
 	-webkit-text-size-adjust: 100%;
 	-ms-text-size-adjust:     100%;
 }
@@ -890,31 +890,32 @@ object {
 	display: block;
 }
 
-/*--------------------------------------------------------------
-# Contact
---------------------------------------------------------------*/
-
 
 
 
 /*Header Styles*/
-
-#logo {
-	margin: -30px;
+#masthead {
+	width: 100%;
+	height: 200px;
+	background-color: #EDECEC;
 }
 
 .site-branding {
 	background-color: white;
-	margin-top: 30px;
 	position: relative;
 }
 
-.site-branding, nav {
+nav {
+	text-align: right;
 }
 
 nav a, nav a:visited {
 	color: black;
 	margin-right: 15px;
+}
+
+nav a:hover {
+	color: #2C97D3;
 }
 
 .site-branding a {
@@ -924,23 +925,56 @@ nav a, nav a:visited {
 
 .site-branding h1 {
 	height: auto;
-	vertical-align: 165%;
+	vertical-align: 65%;
 }
 
 .site-branding img, .site-branding h1, .site-branding p {
+	position: relative;
+	display: inline-block;
+}
+
+.site-branding h1 {
+	font-size: 2.3em;
+	font-weight: 300;
+	position: relative;
+	display: inline-block;
+	color: #B2B2B2;
+	margin: 0;
+}
+
+#logo {
+	height: 150px;
+	margin: -21px;
+	margin-left: 0;
+	position: relative;
+	top: 0px;
 	display: inline-block;
 }
 
 .main-navigation {
 	background-color: white;
-/*	margin-top: -22px;*/
 	position: relative;
+	float: right;
+	clear: right;
 }
 
-#masthead {
+header #masthead {
 	background-color: #EDECEC;
 	width: 100%;
+	display: inline-flex;
+	justify-content: center;
+	vertical-align: center;
+	height: 50px;
 }
+
+.site-branding, .main-navigation {
+	width: 50%;
+	position: relative;
+	display: inline-block;
+	top: 25px;
+	height: 100%;
+}
+
 /*End of header styles*/
 
 /*--------------------------------------------------------------
@@ -948,25 +982,29 @@ nav a, nav a:visited {
 --------------------------------------------------------------*/
 .map-locations {
 	width: 100%;
-	margin-left: 325px;
+	margin-left: 300px;
 }
 .call-asset {
 	display: inline-block;
 	width: 500px;
+	margin-left: 500px;
 }
 .email-asset {
 	display: inline-block;
 	width: 500px;
+	margin-left: 500px;
+
 }
-
-
-
-
-
-
-
-<<<<<<< Updated upstream
-/*End of header styles*/
+.section-title {
+	text-decoration: none;
+	text-align: center;
+	color: #2C97D3;
+}
+.page-title {
+	text-decoration: none;
+	text-align: center;
+	color: 2C9;
+}
 
 /*Index styles*/
 
@@ -974,21 +1012,154 @@ nav a, nav a:visited {
 	width: 100%;
 	height: 500px;
 	background-color: black;
+	position: relative;
+	margin-top: -50px;
 }
 
 #flavor-wrap {
-	width: 100%;
+	width: 80%;
 	height: 200px;
+	margin: 0 auto;
+	border-bottom: 1px solid #2C97D3;
+	padding-bottom: 25%;
 }
 
 .flavor {
 	display: inline-block;
 	text-align: center;
-	width: 14%;
-	margin: 0 9% ;
+	width: 20%;
+	margin: 0 6% ;
 	vertical-align: top;
 }
 
+#about-wrap {
+	width: 70%;
+	margin: 0 auto;
+	position: relative;
+}
+
+#about {
+	width: 60%;
+}
+
+#about h2 {
+	color: #B2B2B2;
+	font-size: 2.2em;
+}
+
+#about-wrap img, #about {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+}
+
+#about-wrap img {
+	width: 50%;
+	margin: -15%;
+	margin-top: -10%;
+	margin-left: 0;
+}
+
+@media screen and (max-width: 900px) {
+	#about-wrap img {
+		margin-top: -5%;
+	}
+}
+
+ul#primary-menu {
+	display:inline-block;
+}
+ul#primary-menu li {
+	font-size:26px;
+}
 /*End of index styles*/
-=======
->>>>>>> Stashed changes
+
+
+/*Footer styles*/
+
+footer {
+	background-color: #EDECEC;
+}
+
+#footer-title, #footer-nav, .site-info {
+	width: 90%;
+	margin-left: 5%;
+}
+
+#footer-title {
+	height: 50px;
+	margin-top: -30px;
+}
+
+#footer-title h6 {
+	font-size: 1.4em;
+	font-weight: 300;
+	position: relative;
+	display: inline-block;
+	top: -7px;
+	color: #B2B2B2;
+}
+
+#footer-logo {
+	height: 50px;
+	margin: -7px;
+	margin-left: 0;
+	position: relative;
+	display: inline-block;
+}
+
+#footer-nav {
+	border-top: 2px solid #B2B2B2;
+	margin-top: 30px;
+	clear: both;
+	display: block;
+	float: left;
+}
+
+#footer-nav ul {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+}
+
+#footer-nav li {
+	float: left;
+	position: relative;
+	border-left: 2px solid #B2B2B2;
+	padding-left: 10px;
+	margin-top: 10px;
+	font-weight: 600;
+}
+
+#footer-nav li:nth-child(1) {
+	padding-left: 0;
+	border-style: none;
+}
+
+#footer-nav a {
+	display: block;
+	text-decoration: none;
+	font-size: 0.6em;
+	color: #B2B2B2;
+}
+
+.site-info {
+	color: #B2B2B2;
+}
+
+.site-info a {
+	color: #2D97D3;
+	text-decoration: none;
+}
+
+#created-by, #copyright {
+	position: relative;
+	display: inline-block;
+}
+
+#copyright {
+	float: right;
+	clear: right;
+}
+
+/*End of footer styles*/
