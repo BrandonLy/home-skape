@@ -8,21 +8,34 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<style>
+			#primary-menu li:nth-child(4) a {
+				color: #2C97D3;
+			}
+		</style>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
+			<div id="shop-wrapper">
+				<h2>FIND THE RIGHT <i>SCENERY</i></h2>
+				<?php $loop = new WP_Query( array( 'post_type' => 'product' ) ); ?>
+				<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+				<?php $image = get_field("product_image"); ?>
+				<?php $width = get_field("product_width"); ?>
+				<?php $height = get_field("product_height"); ?>
+				<?php $price = get_field("product_price"); ?>
 
-			<?php endwhile; // End of the loop. ?>
+					<div class="shop-item-wrapper">
+						<img src="<?php echo $image; ?>" class="shop-item-image" />
+						<h4 class="shop-item-name"><?php echo get_the_title(); ?></h4>
+						<p class="shop-item-info"><?php echo $width; ?> x <?php echo $height; ?></p>
+						<p class="shop-item-info">$<?php echo $price; ?></p>
+						<a class="shop-item-button" href="#">ADD TO CART</a>
+					</div>
+
+				<?php endwhile; wp_reset_query(); ?>
+			</div>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

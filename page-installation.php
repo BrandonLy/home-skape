@@ -8,21 +8,23 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php while ( have_posts() ) : the_post(); ?>
+		<style>
+			#primary-menu li:nth-child(2) a {
+				color: #2C97D3;
+			}
+		</style>
 
-				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
-				<?php
-					// If comments are open or we have at least one comment, load up the comment template.
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>
+			<h1 class="page-title">INSTALLATION</h1>
 
-			<?php endwhile; // End of the loop. ?>
+			<p class="page-flavor">WATCH THE VIDEO FOR STEP BY STEP INSTALLATION INSTRUCTIONS</p>
+
+			<!--Video that we don't have yet-->
+			<video width="640" height="480" controls>
+				<source src="" type="video/mp4">
+			</video>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

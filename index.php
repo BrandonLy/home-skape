@@ -18,41 +18,52 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<!--Slideshow-->
-		<div id="slideshow">Slideshow</div>
+		<div id="slideshow-wrap">
+		<input type="radio" id="slideshow-button1" class="slideshow-button" name="slideshow-control" checked="checked" />
+		<input type="radio" id="slideshow-button2"class="slideshow-button" name="slideshow-control" />
+		<input type="radio" id="slideshow-button3" class="slideshow-button" name="slideshow-control" />
+			<div id="slideshow">
+				<div class="slideshow-slide">
+					<p class="slideshow-info">GET THE EXPERIENCE IN YOUR HOME</p>
+					<a id="slideshow-shop-button" href="<?php echo get_site_url() ?>/wp-content/themes/home-skape/shop.php">
+						<p>SHOP</p>
+					</a>
+					<img class="slideshow-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/temp.png" />
+				</div>
+				<div class="slideshow-slide">
+					<img class="slideshow-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/temp.png" />
+				</div>
+				<div class="slideshow-slide">
+					<img class="slideshow-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/temp.png" />
+				</div>
+			</div>
+		</div>
 
-		<?php if ( have_posts() ) : ?>
+		<div id="flavor-wrap">
+			<div class="flavor" id="sun">
+				<img class="flavor-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/sun.png">
+				<p class="flavor-text">LOWER ENERGY</p>
+			</div>
+			<div class="flavor" id="lock">
+				<img class="flavor-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/lock.png">
+				<p class="flavor-text">PRIVACY</p>
+			</div>
+			<div class="flavor" id="tree">
+				<img class="flavor-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/tree.png">
+				<p class="flavor-text">BEAUTIFUL SCENERY</p>
+			</div>
+		</div>
 
-			<?php if ( is_home() && ! is_front_page() ) : ?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-			<?php endif; ?>
+		<div id="about-wrap">
+			<div id="about">
+				<h2 id="about-title">ABOUT US</h2>
+				<p>Homeskape is a startup company made in 1994 and this is a lot of content that we need to talk to the content team about. They still need to do this, so this is what we've got until they get it done.</p>
+			</div>
+			<img src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/logo.png">
+		</div>
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-
-					/*
-					 * Include the Post-Format-specific template for the content.
-					 * If you want to override this in a child theme, then include a file
-					 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-					 */
-					get_template_part( 'template-parts/content', get_post_format() );
-				?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-		<?php else : ?>
-
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
-
-		<?php endif; ?>
+		
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

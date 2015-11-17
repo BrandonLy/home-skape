@@ -17,8 +17,33 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<style>
+			#primary-menu li:nth-child(1) a {
+				color: #2C97D3;
+			}
+		</style>
+
 		<!--Slideshow-->
-		<div id="slideshow"></div>
+		<div id="slideshow-wrap">
+		<input type="radio" id="slideshow-button1" class="slideshow-button" name="slideshow-control" checked="checked" />
+		<input type="radio" id="slideshow-button2"class="slideshow-button" name="slideshow-control" />
+		<input type="radio" id="slideshow-button3" class="slideshow-button" name="slideshow-control" />
+			<div id="slideshow">
+				<div class="slideshow-slide">
+					<p class="slideshow-info">GET THE EXPERIENCE IN YOUR HOME</p>
+					<a id="slideshow-shop-button" href="<?php echo get_site_url() ?>/wp-content/themes/home-skape/shop.php">
+						<p>SHOP</p>
+					</a>
+					<img class="slideshow-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/slide1.JPG" />
+				</div>
+				<div class="slideshow-slide">
+					<img class="slideshow-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/slide2.JPG" />
+				</div>
+				<div class="slideshow-slide">
+					<img class="slideshow-img" src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/slide3.JPG" />
+				</div>
+			</div>
+		</div>
 
 		<div id="flavor-wrap">
 			<div class="flavor" id="sun">
@@ -38,7 +63,7 @@ get_header(); ?>
 		<div id="about-wrap">
 			<div id="about">
 				<h2 id="about-title">ABOUT US</h2>
-				<p>Homeskape is a startup company made in 1994 blah growl hop down the river in a camel girl. Homeskape is a company we are making a website for them I hope they like my filler text because nobody has any content.</p>
+				<p>Homeskape is a startup company made in 1994 and this is a lot of content that we need to talk to the content team about. They still need to do this, so this is what we've got until they get it done.</p>
 			</div>
 			<img src="<?php echo get_site_url() ?>/wp-content/themes/home-skape/img/logo.png">
 		</div>
